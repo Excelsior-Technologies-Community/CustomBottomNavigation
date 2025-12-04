@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNav"/>
+
+    <com.ext.custombottomnav.CustomBottomNavView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:tabRadius="10dp"
+        app:tabTextSize="13sp"
+        app:iconSize="20dp"
+        app:activeTabScale="1.1"
+        app:indicatorColor="#2196F3"
+        app:tabBackgroundColor="#FFFFFF"
+        tools:listitem="@layout/bottom_nav_item"/>
+
+
+</RelativeLayout>

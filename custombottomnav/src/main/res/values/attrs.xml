@@ -1,0 +1,18 @@
+<resources>
+
+    <declare-styleable name="CustomBottomNavView">
+
+        <attr name="tabRadius" format="dimension"/>
+        <attr name="tabTextSize" format="dimension"/>
+        <attr name="tabFontFamily" format="reference"/>
+
+        <attr name="activeTabScale" format="float"/>
+        <attr name="tabBackgroundColor" format="color"/>
+        <attr name="indicatorColor" format="color"/>
+
+        <attr name="iconSize" format="dimension"/>
+        <attr name="animationDuration" format="integer"/>
+
+    </declare-styleable>
+
+</resources>
