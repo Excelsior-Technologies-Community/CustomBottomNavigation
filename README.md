@@ -12,17 +12,18 @@ It supports **2 to 6 tabs**, **badges**, **custom fonts**, **smooth animations**
 
 ## ✨ Features
 
-✅ Supports **2 – 6 tabs**
-✅ Smooth **scale animation** on selection
-✅ **Custom corner radius** (top & bottom independently)
-✅ **Custom text size & icon size**
-✅ **Badge support** on each tab
-✅ **Custom font (fontFamily)**
-✅ **Active indicator bar**
-✅ **Custom padding (Start, Top, End, Bottom)**
-✅ **Solid color or Gradient background**
-✅ **On tab selected listener**
+✅ Supports **2 – 6 tabs**  
+✅ Smooth **scale animation** on selection  
+✅ **Custom corner radius** (top & bottom independently)  
+✅ **Custom text size & icon size**  
+✅ **Badge support** on each tab  
+✅ **Custom font (fontFamily)**  
+✅ **Active indicator bar**  
+✅ **Custom padding (Start, Top, End, Bottom)**  
+✅ **Solid color or Gradient background**  
+✅ **On tab selected listener**  
 ✅ Minimum height automatically enforced (58dp)
+
 
 ---
 
