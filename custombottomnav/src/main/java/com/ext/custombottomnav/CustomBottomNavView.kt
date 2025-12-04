@@ -17,7 +17,8 @@ class CustomBottomNavView @JvmOverloads constructor(
     attrs: AttributeSet? = null,
 ) : LinearLayout(context, attrs) {
 
-    private var tabRadius = 20f
+    private var tabRadiusTop = 0f
+    private var tabRadiusBottom = 0f
     private var tabTextSize = 12f
     private var iconSize = 24
     private var activeScale = 1.2f
@@ -47,7 +48,8 @@ class CustomBottomNavView @JvmOverloads constructor(
             clipToPadding = false
 
             val a = context.obtainStyledAttributes(attrs, R.styleable.CustomBottomNavView)
-            tabRadius = a.getDimension(R.styleable.CustomBottomNavView_tabRadius, 20f)
+            tabRadiusTop = a.getDimension(R.styleable.CustomBottomNavView_tabRadiusTop, 0f)
+            tabRadiusBottom = a.getDimension(R.styleable.CustomBottomNavView_tabRadiusBottom, 0f)
             tabTextSize = a.getDimension(R.styleable.CustomBottomNavView_tabTextSize, 12f)
             iconSize = a.getDimensionPixelSize(R.styleable.CustomBottomNavView_iconSize, 24)
             activeScale = a.getFloat(R.styleable.CustomBottomNavView_activeTabScale, 1.2f)
@@ -200,7 +202,12 @@ class CustomBottomNavView @JvmOverloads constructor(
 
     private fun applyNavBarBackground() {
         val bg = GradientDrawable()
-        bg.cornerRadius = tabRadius
+        bg.cornerRadii = floatArrayOf(
+            tabRadiusTop, tabRadiusTop,        // Top Left
+            tabRadiusTop, tabRadiusTop,        // Top Right
+            tabRadiusBottom, tabRadiusBottom,  // Bottom Right
+            tabRadiusBottom, tabRadiusBottom   // Bottom Left
+        )
         bg.setColor(tabBgColor)
         background = bg
 
@@ -216,7 +223,12 @@ class CustomBottomNavView @JvmOverloads constructor(
 
     fun setNavBarGradient(colors: IntArray, orientation: GradientDrawable.Orientation = GradientDrawable.Orientation.LEFT_RIGHT) {
         val gradient = GradientDrawable(orientation, colors)
-        gradient.cornerRadius = tabRadius
+        gradient.cornerRadii = floatArrayOf(
+            tabRadiusTop, tabRadiusTop,
+            tabRadiusTop, tabRadiusTop,
+            tabRadiusBottom, tabRadiusBottom,
+            tabRadiusBottom, tabRadiusBottom
+        )
         background = gradient
     }
 

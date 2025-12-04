@@ -2,7 +2,8 @@
 
     <declare-styleable name="CustomBottomNavView">
 
-        <attr name="tabRadius" format="dimension"/>
+        <attr name="tabRadiusTop" format="dimension"/>
+        <attr name="tabRadiusBottom" format="dimension"/>
         <attr name="tabTextSize" format="dimension"/>
         <attr name="tabFontFamily" format="reference"/>
 
