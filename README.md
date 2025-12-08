@@ -12,8 +12,8 @@ It supports **2 to 6 tabs**, **badges**, **custom fonts**, **smooth animations**
 
 ## Preview
 
-![Preview 1](assets/image1.png)
-![Preview 2](assets/image2.png)
+![Preview 1](assets/image1.png.jpg)
+![Preview 2](assets/image2.png.jpg)
 
 ---
 
