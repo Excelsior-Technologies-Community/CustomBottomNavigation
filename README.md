@@ -83,10 +83,39 @@ implementation("com.github.Excelsior-Technologies-Community:CustomBottomNavigati
 val nav = findViewById<CustomBottomNavView>(R.id.customBottomNav)
 
 val tabs = listOf(
-    BottomNavItem("Home", ContextCompat.getDrawable(this, R.drawable.ic_home)!!),
-    BottomNavItem("Search", ContextCompat.getDrawable(this, R.drawable.ic_search)!!),
-    BottomNavItem("Profile", ContextCompat.getDrawable(this, R.drawable.ic_user)!!)
-)
+
+            BottomNavItem(
+                id = 1,
+                icon = getDrawable(R.drawable.ic_home)!!,
+                title = "Home",
+                selectedIconColor = Color.BLUE,
+                unSelectedIconColor = Color.GRAY,
+                selectedTextColor = Color.BLUE,
+                unSelectedTextColor = Color.GRAY,
+                badgeCount = 2
+            ),
+
+            BottomNavItem(
+                id = 2,
+                icon = getDrawable(R.drawable.ic_search)!!,
+                title = "Search",
+                selectedIconColor = Color.RED,
+                unSelectedIconColor = Color.GRAY,
+                selectedTextColor = Color.RED,
+                unSelectedTextColor = Color.GRAY
+            ),
+
+            BottomNavItem(
+                id = 3,
+                icon = getDrawable(R.drawable.ic_profile)!!,
+                title = "Profile",
+                selectedIconColor = Color.GREEN,
+                unSelectedIconColor = Color.GRAY,
+                selectedTextColor = Color.GREEN,
+                unSelectedTextColor = Color.GRAY
+            )
+
+        )
 
 nav.setTabs(tabs)
 
@@ -98,6 +127,11 @@ nav.setOnTabSelectedListener { index ->
         2 -> openProfile()
     }
 }
+
+//Example
+bottomNav.setOnTabSelectedListener { index ->
+            Toast.makeText(this, "Tab $index Selected", Toast.LENGTH_SHORT).show()
+        }
 ```
 
 ---
